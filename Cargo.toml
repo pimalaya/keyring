@@ -1,0 +1,30 @@
+[package]
+name = "keyring-flows"
+description = "I/O-free library to manage keyring entries"
+version = "0.1.0"
+authors = ["soywod <clement.douin@posteo.net>"]
+edition = "2021"
+license = "MIT"
+categories = []
+keywords = ["io-free", "flow", "keyring", "credential", "store"]
+homepage = "https://pimalaya.org"
+documentation = "https://docs.rs/keyring-flows/latest/keyring_flows"
+repository = "https://github.com/pimalaya/keyring"
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
+all-features = true
+
+[features]
+default = []
+std = []
+serde = ["dep:serde"]
+
+[dev-dependencies]
+env_logger = "0.11"
+
+[dependencies]
+keyring = "=4.0.0-rc.1"
+log = "0.4"
+secrecy = "0.10"
+serde = { version = "1", optional = true }
